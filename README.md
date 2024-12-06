@@ -1,1 +1,4 @@
-Just, like, do whatever you want. Just make a branch, than merge when you want to "submit" to the repo. Or dont. Im not your dad. Just have fun with it, and we'll make it work regardless.
+-App.java is the main file(like command interface and linking all code together)
+-DB is database stuff
+-User is all of task 1&2 files
+-Product is what im building currently.
