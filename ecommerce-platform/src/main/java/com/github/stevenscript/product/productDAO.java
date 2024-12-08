@@ -33,6 +33,15 @@ public interface productDAO {
      */
     List<product> findBySellerId(int sellerId);
 
+
+    /**
+ * Finds products whose names match the specified pattern.
+ * 
+ * @param namePattern The pattern to search for in product names (supports SQL LIKE syntax).
+ * @return A list of products with names matching the pattern, or an empty list if no matches are found.
+ */
+    List<product> findByName(String namePattern);
+
     /**
      * Returns all products in the system.
      *

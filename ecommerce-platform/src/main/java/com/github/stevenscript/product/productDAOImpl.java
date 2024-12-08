@@ -138,6 +138,40 @@ public class productDAOImpl implements productDAO {
     }
 
 
+
+    /**
+     * Retrieves a list of products from the database whose names match the given pattern.
+     * Uses a case-insensitive search ('ILIKE') to match the pattern anywhere in the product name.
+     *
+     * @param namePattern the substring or pattern used for matching product names.
+     *                    It will be wrapped with '%' wildcards for partial matches.
+     * @return a list of Product objects matching the pattern, or an empty list if no matches are found.
+     */
+    @Override
+    public List<product> findByName(String namePattern) {
+        List<product> products = new ArrayList<>();
+        String sql = "SELECT id, name, price, quantity, seller_id FROM products WHERE name ILIKE ?";
+        try (Connection conn = dataBaseConnection.getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, "%" + namePattern + "%");
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    product p = new product();
+                    p.setId(rs.getInt("id"));
+                    p.setName(rs.getString("name"));
+                    p.setPrice(rs.getDouble("price"));
+                    p.setQuantity(rs.getInt("quantity"));
+                    p.setSellerId(rs.getInt("seller_id"));
+                    products.add(p);
+                }
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return products;
+    }
+
+
     /**
      * Updates an existing product in the database.
      * 
