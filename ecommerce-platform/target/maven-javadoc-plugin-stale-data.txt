@@ -1,0 +1,53 @@
+-J-Duser.language=
+-J-Duser.country=
+@options
+@packages
+-classpath
+'C:/Users/Steven/.m2/repository/org/postgresql/postgresql/42.5.0/postgresql-42.5.0.jar;C:/Users/Steven/.m2/repository/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.jar'
+-encoding
+'UTF-8'
+-protected
+-source
+'11'
+-sourcepath
+'C:/Users/Steven/Documents/GitHub/Java-Final-EcomPlatform/ecommerce-platform/src/main/java'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Steven/Documents/GitHub/Java-Final-EcomPlatform/ecommerce-platform/target/reports/apidocs'
+-docencoding
+'UTF-8'
+-doctitle
+'ecommerce-platform 1.0-SNAPSHOT API'
+-linkoffline
+'https://docs.oracle.com/en/java/javase/11/docs/api' 'C:/Users/Steven/Documents/GitHub/Java-Final-EcomPlatform/ecommerce-platform/target/javadoc-bundle-options'
+-use
+-version
+-windowtitle
+'ecommerce-platform 1.0-SNAPSHOT API'
+com.github.stevenscript
+com.github.stevenscript.product
+com.github.stevenscript.user
+C:\Users\Steven\.m2\repository\org\postgresql\postgresql\42.5.0\postgresql-42.5.0.jar = 1733345882868
+C:\Users\Steven\.m2\repository\org\mindrot\jbcrypt\0.4\jbcrypt-0.4.jar = 1733345882790
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\src\main\java = 1732852247397
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\allclasses-index.html = 1733960649053
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\allpackages-index.html = 1733960649056
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\element-list = 1733960648904
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\help-doc.html = 1733960649094
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\index-all.html = 1733960649088
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\index.html = 1733960649034
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\jquery-ui.overrides.css = 1733960649116
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\member-search-index.js = 1733960649061
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\module-search-index.js = 1733960649057
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\overview-summary.html = 1733960649090
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\overview-tree.html = 1733960649031
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\package-search-index.js = 1733960649059
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\script.js = 1733960649098
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\search.js = 1733960649101
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\stylesheet.css = 1733960649097
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\tag-search-index.js = 1733960649062
+C:\Users\Steven\Documents\GitHub\Java-Final-EcomPlatform\ecommerce-platform\target\reports\apidocs\type-search-index.js = 1733960649060
