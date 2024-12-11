@@ -1,5 +1,3 @@
-Below is an example `README.md` file that you can adapt as needed for your project. It assumes the structure and details provided in previous discussions. Update any sections that need more detail (like actual database credentials, setup instructions, or class diagrams) once the information is finalized.
-
 ---
 
 # E-Commerce Platform (Console-Based)
