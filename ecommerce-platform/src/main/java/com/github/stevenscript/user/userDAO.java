@@ -5,20 +5,19 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.List;
 
 import org.mindrot.jbcrypt.BCrypt;
 
-import com.github.stevenscript.product.product;
-
 /**
- * This is referred to as a Data Access Object (DAO) class file, used to perform database operations on Use: 
+ * Data Access Object (DAO) class for performing database operations on users.
+ * <p>
+ * This class handles user registration and login operations against the database.
  */
 public class userDAO {
     private Connection connection;
 
     /**
-     * Construct a userDAO with specified database connections.
+     * Constructs a UserDAO with the specified database connection.
      * 
      * @param connection the database connection, will be used for operations
      */
@@ -27,10 +26,10 @@ public class userDAO {
     }
 
     /**
-     * Register a new user in the database provided.
+     * Registers a new user in the database.
      * 
-     * @param user contains user details to be registered
-     * @throws SQLException for when a database error occurs/SQL statement fails
+     * @param user the user object containing details to be registered
+     * @throws SQLException if a database error occurs or SQL execution fails
      */
     public void registerUser(user user) throws SQLException {   // used to insert user info into the users table for SQL queries
         String query = "INSERT INTO users (username, password, email, role) VALUES (?, ?, ?, ?)";
@@ -50,12 +49,12 @@ public class userDAO {
     }
 
     /**
-     * Logs in a user by verifying both username and password.
+     * Logs in a user by verifying their username and password.
      * 
-     * @param username is the name of the user attempting to login
-     * @param password contains a plaintext password of the user trying to login
-     * @return this returns the User object if a login is successful, and null if it fails
-     * @throws SQLException occurs with a database error/SQL statement fail
+     * @param username the username of the user attempting to log in
+     * @param password the plaintext password provided by the user
+     * @return the User object if login is successful, or null if it fails
+     * @throws SQLException if a database error occurs or SQL execution fails
      */
     public user loginUser(String username, String password) throws SQLException {
         String query = "SELECT * FROM users WHERE username = ?"; // SELECT query retrieves user info from the users table, given the username matches the proper params
@@ -78,6 +77,12 @@ public class userDAO {
         return null;   // if there's no existing user found, this returns null (login failure)
     }
 
+    /**
+     * Deletes a user from the database based on the provided user ID.
+     * 
+     * @param userId the ID of the user to delete
+     * @throws SQLException if a database error occurs or SQL execution fails
+     */
     public void deleteUser(int userId) throws SQLException {
         String query = "DELETE FROM users WHERE id = ?";
         try (PreparedStatement stmt = connection.prepareStatement(query)) {

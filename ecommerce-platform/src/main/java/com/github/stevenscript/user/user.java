@@ -1,10 +1,11 @@
 package com.github.stevenscript.user;
 
 /**
- * A generic placeholder for the user class.
- * 
- * This class is a temporary stub to avoid compilation errors in ProductService.
- * Replace with the actual user class code when available.
+ * Represents a generic user in the system.
+ * <p>
+ * This class includes basic user information: ID, username, password, email,
+ * and role. It is intended as a base class for more specific user types
+ * (such as Buyer, Seller, and Admin).
  */
 public class user { // basic user information, includes their id, username, password, email, and role
     private int id;
@@ -22,14 +23,29 @@ public class user { // basic user information, includes their id, username, pass
         return id;
     }
 
+    /**
+     * Returns the user's username.
+     *
+     * @return the username
+     */
     public String getUsername() {
         return username;
     }
     
+    /**
+     * Returns the user's password (hashed).
+     *
+     * @return the hashed password
+     */
     public String getPassword() {
         return password;
     }
     
+    /**
+     * Returns the user's email address.
+     *
+     * @return the email address
+     */
     public String getEmail() {
         return email;
     }
@@ -43,14 +59,29 @@ public class user { // basic user information, includes their id, username, pass
         this.id = id;
     }
 
+    /**
+     * Sets the user's username.
+     *
+     * @param username the username to set
+     */
     public void setUsername(String username) {
         this.username = username;
     }
 
+    /**
+     * Sets the user's password (should be hashed).
+     *
+     * @param password the hashed password to set
+     */
     public void setPassword(String password) {
         this.password = password;
     }
 
+    /**
+     * Sets the user's email address.
+     *
+     * @param email the email address to set
+     */
     public void setEmail(String email) {
         this.email = email;
     }
