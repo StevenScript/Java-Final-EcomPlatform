@@ -2,6 +2,7 @@ package com.github.stevenscript.user;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 
 import org.mindrot.jbcrypt.BCrypt;
 
@@ -92,6 +93,26 @@ public class userService {
                 throw new IllegalArgumentException("Invalid role: " + user.getRole());
         }
     }
+
+    /**
+     * Retrieves a list of all users from the database.
+     *
+     * @return a {@link List} of {@code user} objects representing all users in the database.
+     * @throws SQLException if a database access error occurs.
+     */
+    public List<user> findAllUsers() throws SQLException {
+        return userDAO.findAllUsers();
+    }
+
+    /**
+     * Deletes a user from the database based on the provided user ID.
+     *
+     * @param userId the unique identifier of the user to be deleted.
+     * @throws SQLException if a database access error occurs or the user ID is invalid.
+     */
+    public void deleteUser(int userId) throws SQLException {
+        userDAO.deleteUser(userId);
+    }    
 
     // Lastly, placeholder methods for the three role-based menus ('buyer', 'seller', 'admin' respectively)
 
