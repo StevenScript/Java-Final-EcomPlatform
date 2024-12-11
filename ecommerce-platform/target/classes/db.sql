@@ -24,8 +24,9 @@ CREATE TABLE IF NOT EXISTS products (
 
 --Users
 INSERT INTO users (username, password, email, role) VALUES (?, ?, ?, ?)
+SELECT id, username, password, email, role FROM users
 SELECT * FROM users WHERE username = ?
-DELETE FROM users WHERE username = ?
+DELETE FROM users WHERE id = ?
 
 --Products
 SELECT id, name, price, quantity, seller_id FROM products
