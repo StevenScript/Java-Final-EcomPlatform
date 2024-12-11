@@ -139,11 +139,11 @@ public class App {
             switch (choice) {
                 case 1:
                     System.out.println("Viewing users...");
-                    //Establish connection
+                    admin.findAllUsers(connection);
                     break;
                 case 2:
                     System.out.println("Deleting user...");
-                    //Establish connection
+                    admin.deleteUser(connection);
                     break;
                 case 3:
                     System.out.println("Viewing products...");
