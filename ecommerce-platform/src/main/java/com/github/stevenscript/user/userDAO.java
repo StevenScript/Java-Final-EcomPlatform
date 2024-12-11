@@ -5,6 +5,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.mindrot.jbcrypt.BCrypt;
 
@@ -89,5 +91,33 @@ public class userDAO {
             stmt.setInt(1, userId);
             stmt.executeUpdate();
         }
+    }
+
+    /**
+     * Retrieves all users from the database.
+     * <p>
+     * Executes a SELECT query to get all users, mapping the result set to a list
+     * of User objects.
+     * 
+     * @return a list of all users in the database, or an empty list if none are found
+     * @throws SQLException if a database access error occurs or SQL statement fails
+     */
+    public List<user> findAllUsers() throws SQLException {
+        List<user> users = new ArrayList<>();
+        String query = "SELECT id, username, password, email, role FROM users";
+        
+        try (PreparedStatement stmt = connection.prepareStatement(query);
+             ResultSet rs = stmt.executeQuery()) {
+            while (rs.next()) {
+                user u = new user();
+                u.setId(rs.getInt("id"));
+                u.setUsername(rs.getString("username"));
+                u.setPassword(rs.getString("password"));
+                u.setEmail(rs.getString("email"));
+                u.setRole(rs.getString("role"));
+                users.add(u);
+            }
+        }
+        return users;
     }
 }
