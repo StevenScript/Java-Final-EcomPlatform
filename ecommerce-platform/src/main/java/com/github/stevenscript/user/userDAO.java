@@ -5,8 +5,11 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 import org.mindrot.jbcrypt.BCrypt;
+
+import com.github.stevenscript.product.product;
 
 /**
  * This is referred to as a Data Access Object (DAO) class file, used to perform database operations on Use: 
@@ -73,5 +76,13 @@ public class userDAO {
            } 
         }
         return null;   // if there's no existing user found, this returns null (login failure)
+    }
+
+    public void deleteUser(int userId) throws SQLException {
+        String query = "DELETE FROM users WHERE id = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(query)) {
+            stmt.setInt(1, userId);
+            stmt.executeUpdate();
+        }
     }
 }
